@@ -67,7 +67,7 @@ type cmd struct {
 func command(stdin io.Writer, p params) (*cmd, error) {
 	netname, address := "ip4:icmp", "0.0.0.0"
 	if p.net6 {
-		netname, address = "ip6:ipv6-icmp", "::1"
+		netname, address = "ip6:ipv6-icmp", "::"
 	}
 	conn, err := icmp.ListenPacket(netname, address)
 	if err != nil {
@@ -136,23 +136,25 @@ func (c *cmd) ping(addr *net.IPAddr, i uint64, waitFor time.Duration) (string, e
 		return "", fmt.Errorf("conn.Write failed: %w", err)
 	}
 
-	rb := make([]byte, 1500)
-	n, _, err := c.conn.ReadFrom(rb)
-	if err != nil {
-		return "", fmt.Errorf("conn.Read failed: %w", err)
-	}
-
-	latency := time.Since(startTime)
-
 	var echoReplyType icmp.Type = ipv4.ICMPTypeEchoReply
 	if c.net6 {
 		echoReplyType = ipv6.ICMPTypeEchoReply
 	}
 
-	msg, err := icmp.ParseMessage(echoReplyType.Protocol(), rb[:n])
-	if err != nil {
-		return "", fmt.Errorf("icmp.ParseMessage failed: %w", err)
+	rb := make([]byte, 1500)
+	var n int
+	var msg *icmp.Message
+	for msg == nil || msg.Type != echoReplyType {
+		n, _, err = c.conn.ReadFrom(rb)
+		if err != nil {
+			return "", fmt.Errorf("conn.Read failed: %w", err)
+		}
+		msg, err = icmp.ParseMessage(echoReplyType.Protocol(), rb[:n])
+		if err != nil {
+			return "", fmt.Errorf("icmp.ParseMessage failed: %w", err)
+		}
 	}
+	latency := time.Since(startTime)
 
 	echoReply, ok := msg.Body.(*icmp.Echo)
 	if !ok {

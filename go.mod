@@ -13,13 +13,13 @@ require (
 	github.com/dustin/go-humanize v1.0.1
 	github.com/florianl/go-tc v0.4.5-0.20240822175159-7926c32f7299
 	github.com/gliderlabs/ssh v0.3.5
-	github.com/gojuno/minimock/v3 v3.0.8
+	github.com/gojuno/minimock/v3 v3.4.7
 	github.com/google/go-cmp v0.7.0
 	github.com/google/go-tpm v0.9.2-0.20240919181259-d96ccf715685
 	github.com/google/uuid v1.6.0
-	github.com/gopacket/gopacket v1.2.0
+	github.com/gopacket/gopacket v1.6.1
 	github.com/hugelgupf/vmtest v0.0.0-20240307030256-5d9f3d34a58d
-	github.com/insomniacslk/dhcp v0.0.0-20231206064809-8c70d406f6d2
+	github.com/insomniacslk/dhcp v0.0.0-20260719225207-c76316d4aa82
 	github.com/ishidawataru/sctp v0.0.0-20230406120618-7ff4192f6ff2
 	github.com/kevinburke/ssh_config v1.2.0
 	github.com/klauspost/compress v1.18.0
@@ -41,13 +41,13 @@ require (
 	github.com/vishvananda/netlink v1.3.0
 	github.com/vishvananda/netns v0.0.4
 	github.com/vtolstov/go-ioctl v0.0.0-20151206205506-6be9cced4810
-	golang.org/x/crypto v0.52.0
+	golang.org/x/crypto v0.53.0
 	golang.org/x/exp v0.0.0-20260410095643-746e56fc9e2f
-	golang.org/x/net v0.54.0
-	golang.org/x/sys v0.45.0
-	golang.org/x/term v0.43.0
-	golang.org/x/text v0.37.0
-	golang.org/x/tools v0.44.0
+	golang.org/x/net v0.56.0
+	golang.org/x/sys v0.46.0
+	golang.org/x/term v0.44.0
+	golang.org/x/text v0.39.0
+	golang.org/x/tools v0.47.0
 	gopkg.in/yaml.v2 v2.4.0
 	mvdan.cc/sh/v3 v3.11.0
 	pack.ag/tftp v1.0.1-0.20181129014014-07909dfbde3c
@@ -122,8 +122,8 @@ require (
 	github.com/therootcompany/xz v1.0.1
 	github.com/tklauser/numcpus v0.8.0 // indirect
 	golang.org/x/arch v0.2.0 // indirect
-	golang.org/x/mod v0.35.0 // indirect
-	golang.org/x/sync v0.20.0
+	golang.org/x/mod v0.37.0 // indirect
+	golang.org/x/sync v0.21.0
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 

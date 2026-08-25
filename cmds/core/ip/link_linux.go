@@ -400,7 +400,7 @@ func (cmd *cmd) linkAdd() error {
 		return cmd.handle.LinkAdd(&netlink.Gretap{LinkAttrs: attrs})
 	case "ipip":
 		return cmd.handle.LinkAdd(&netlink.Iptun{LinkAttrs: attrs})
-	case "ip6tln":
+	case "ip6tnl":
 		return cmd.handle.LinkAdd(&netlink.Ip6tnl{LinkAttrs: attrs})
 	case "sit":
 		return cmd.handle.LinkAdd(&netlink.Sittun{LinkAttrs: attrs})
@@ -992,7 +992,7 @@ func (cmd *cmd) printLinkJSON(links []linkData) error {
 					family = "inet6"
 				}
 
-				ip := strings.Split(addr.IPNet.String(), "/")[0]
+				ip, _, _ := strings.Cut(addr.IPNet.String(), "/")
 				prefixlen := strings.Split(addr.IPNet.String(), "/")[1]
 
 				addrInfo := AddrJSON{

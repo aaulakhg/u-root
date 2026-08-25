@@ -144,8 +144,8 @@ github.com/go-git/go-billy/v5/util
 ## explicit; go 1.12
 github.com/go-ole/go-ole
 github.com/go-ole/go-ole/oleutil
-# github.com/gojuno/minimock/v3 v3.0.8
-## explicit; go 1.13
+# github.com/gojuno/minimock/v3 v3.4.7
+## explicit; go 1.23.0
 github.com/gojuno/minimock/v3
 # github.com/google/go-cmp v0.7.0
 ## explicit; go 1.21
@@ -197,8 +197,8 @@ github.com/google/go-tpm/tpmutil/tbs
 # github.com/google/uuid v1.6.0
 ## explicit
 github.com/google/uuid
-# github.com/gopacket/gopacket v1.2.0
-## explicit; go 1.20
+# github.com/gopacket/gopacket v1.6.1
+## explicit; go 1.24.0
 github.com/gopacket/gopacket
 github.com/gopacket/gopacket/layers
 # github.com/hashicorp/golang-lru/v2 v2.0.7
@@ -236,8 +236,8 @@ github.com/hugelgupf/vmtest/vminit/gouinit
 github.com/hugelgupf/vmtest/vminit/shelluinit
 github.com/hugelgupf/vmtest/vminit/shutdownafter
 github.com/hugelgupf/vmtest/vminit/vmmount
-# github.com/insomniacslk/dhcp v0.0.0-20231206064809-8c70d406f6d2
-## explicit; go 1.20
+# github.com/insomniacslk/dhcp v0.0.0-20260719225207-c76316d4aa82
+## explicit; go 1.23.0
 github.com/insomniacslk/dhcp/dhcpv4
 github.com/insomniacslk/dhcp/dhcpv4/client4
 github.com/insomniacslk/dhcp/dhcpv4/nclient4
@@ -248,6 +248,7 @@ github.com/insomniacslk/dhcp/dhcpv6/nclient6
 github.com/insomniacslk/dhcp/dhcpv6/server6
 github.com/insomniacslk/dhcp/iana
 github.com/insomniacslk/dhcp/interfaces
+github.com/insomniacslk/dhcp/internal/xsocket
 github.com/insomniacslk/dhcp/netboot
 github.com/insomniacslk/dhcp/rfc1035label
 # github.com/ishidawataru/sctp v0.0.0-20230406120618-7ff4192f6ff2
@@ -503,7 +504,7 @@ go.bug.st/serial/unixutils
 # golang.org/x/arch v0.2.0
 ## explicit; go 1.17
 golang.org/x/arch/x86/x86asm
-# golang.org/x/crypto v0.52.0
+# golang.org/x/crypto v0.53.0
 ## explicit; go 1.25.0
 golang.org/x/crypto/blowfish
 golang.org/x/crypto/cast5
@@ -522,12 +523,12 @@ golang.org/x/crypto/ssh/knownhosts
 ## explicit; go 1.25.0
 golang.org/x/exp/constraints
 golang.org/x/exp/maps
-# golang.org/x/mod v0.35.0
+# golang.org/x/mod v0.37.0
 ## explicit; go 1.25.0
 golang.org/x/mod/internal/lazyregexp
 golang.org/x/mod/module
 golang.org/x/mod/semver
-# golang.org/x/net v0.54.0
+# golang.org/x/net v0.56.0
 ## explicit; go 1.25.0
 golang.org/x/net/bpf
 golang.org/x/net/icmp
@@ -537,19 +538,19 @@ golang.org/x/net/internal/socks
 golang.org/x/net/ipv4
 golang.org/x/net/ipv6
 golang.org/x/net/proxy
-# golang.org/x/sync v0.20.0
+# golang.org/x/sync v0.21.0
 ## explicit; go 1.25.0
 golang.org/x/sync/errgroup
-# golang.org/x/sys v0.45.0
+# golang.org/x/sys v0.46.0
 ## explicit; go 1.25.0
 golang.org/x/sys/cpu
 golang.org/x/sys/plan9
 golang.org/x/sys/unix
 golang.org/x/sys/windows
-# golang.org/x/term v0.43.0
+# golang.org/x/term v0.44.0
 ## explicit; go 1.25.0
 golang.org/x/term
-# golang.org/x/text v0.37.0
+# golang.org/x/text v0.39.0
 ## explicit; go 1.25.0
 golang.org/x/text/feature/plural
 golang.org/x/text/internal
@@ -565,7 +566,7 @@ golang.org/x/text/message
 golang.org/x/text/message/catalog
 golang.org/x/text/transform
 golang.org/x/text/unicode/norm
-# golang.org/x/tools v0.44.0
+# golang.org/x/tools v0.47.0
 ## explicit; go 1.25.0
 golang.org/x/tools/go/ast/astutil
 golang.org/x/tools/go/ast/edge
